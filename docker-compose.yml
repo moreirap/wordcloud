@@ -1,0 +1,15 @@
+version:  '2'
+services:
+  dev:
+    container_name: prosapient_dev
+    build: .
+    ports:
+      - "6800:6800"
+    volumes:
+      - .:/code
+  redis:
+    container_name: redis
+    image:  "scrapybook/redis"
+    ports:
+      - "6379:6379"
+  
